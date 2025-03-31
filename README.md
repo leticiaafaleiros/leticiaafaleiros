@@ -29,8 +29,8 @@
 </div>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/leticiaafaleiros/leticiaafaleiros/output/snake.svg">
-    <img src="https://raw.githubusercontent.com/leticiaafaleiros/leticiaafaleiros/output/snake.gif" alt="GitHub Contribution Snake" width="100%">
-  </picture>
+  <img src="https://raw.githubusercontent.com/leticiaafaleiros/leticiaafaleiros/output/snake.svg" 
+       alt="GitHub Contribution Snake" 
+       width="800"
+       style="max-width: 100%; height: auto;">
 </p>
