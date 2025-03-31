@@ -27,4 +27,10 @@
     <a href="mailto:leticiafaleiros9@gmail.com"><img src="https://img.shields.io/badge/-Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
     <a href="https://www.linkedin.com/in/leticia-faleiros-" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>  
 </div>
-![Snake animation](https://raw.githubusercontent.com/leticiaafaleiros/leticiaafaleiros/output/snake.svg)
+
+<p align="center">
+  <picture>
+    <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/leticiaafaleiros/leticiaafaleiros/output/snake.svg">
+    <img src="https://raw.githubusercontent.com/leticiaafaleiros/leticiaafaleiros/output/snake.gif" alt="GitHub Contribution Snake" width="100%">
+  </picture>
+</p>
