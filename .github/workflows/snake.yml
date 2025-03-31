@@ -1,4 +1,4 @@
-name: Generate Snake
+name: Snake Animation
 on:
   schedule:
     - cron: "0 */12 * * *"
@@ -9,21 +9,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Generate Optimized Snake
+
+      - name: Generate ANIMATED Snake
         uses: Platane/snk@master
         with:
-          github_user_name: leticiaafaleiros
+          github_user_name: leticiaafaleiros 
           svg_out_path: snake.svg
-          # Configurações essenciais:
-          type: 'gif'  # Gera um GIF animado
-          width: 800   # Largura otimizada
-          theme: 'dark'
-          show_other_contributions: true
+          gif_out_path: snake.gif  
+          animate: true  
+          frames: 120  
+          delay: 1 
 
-      - name: Deploy to Output
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: output
           folder: .
-          clean-exclude: snake.svg
+          clean-exclude: |
+            snake.svg
+            snake.gif
