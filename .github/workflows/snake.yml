@@ -10,21 +10,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Generate Animated Snake
+      - name: Generate Optimized Snake
         uses: Platane/snk@master
         with:
           github_user_name: leticiaafaleiros
           svg_out_path: snake.svg
-          gif_out_path: snake.gif  # Adicionando saída GIF
-          animate: true  # Força animação
-          colors:
-            background: '#0d1117'
-            snake: '#58a6ff'
+          # Configurações essenciais:
+          type: 'gif'  # Gera um GIF animado
+          width: 800   # Largura otimizada
+          theme: 'dark'
+          show_other_contributions: true
 
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+      - name: Deploy to Output
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          name: snake-animation
-          path: |
-            snake.svg
-            snake.gif
+          branch: output
+          folder: .
+          clean-exclude: snake.svg
