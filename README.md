@@ -28,9 +28,27 @@
     <a href="https://www.linkedin.com/in/leticia-faleiros-" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>  
 </div>
 
-<p align="center">
+<div>
+<p align="center">  
   <img src="https://raw.githubusercontent.com/leticiaafaleiros/leticiaafaleiros/output/snake.svg" 
-       alt="GitHub Contribution Snake" 
-       width="800"
-       style="max-width: 100%; height: auto;">
+       alt="GitHub Snake" 
+       width="100%"
+       style="max-width: 800px;">  
+  
+  <img src="https://raw.githubusercontent.com/leticiaafaleiros/leticiaafaleiros/output/snake.gif" 
+       alt="GitHub Snake" 
+       width="100%"
+       style="max-width: 800px; display: none;"
+       id="snake-fallback">
 </p>
+
+<script>  
+  document.addEventListener('DOMContentLoaded', () => {
+    const svg = document.querySelector('img[src*="snake.svg"]');
+    svg.onerror = () => {
+      document.getElementById('snake-fallback').style.display = 'block';
+      svg.style.display = 'none';
+    };
+  });
+</script>
+</div>
