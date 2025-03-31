@@ -1,7 +1,7 @@
 name: Snake Animation
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */12 * * *"  # Executa a cada 12 horas
   workflow_dispatch:
 
 jobs:
@@ -10,21 +10,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate ANIMATED Snake
+      - name: Generate High-Quality GIF
         uses: Platane/snk@master
         with:
-          github_user_name: leticiaafaleiros 
-          svg_out_path: snake.svg
-          gif_out_path: snake.gif  
-          animate: true  
-          frames: 120  
-          delay: 1 
+          github_user_name: leticiaafaleiros
+          output: gif  # Força saída como GIF animado
+          gif_out_path: snake.gif
+          width: 800   # Largura otimizada
+          delay: 3     # Tempo entre frames (ms)
+          colors:
+            background: '#0d1117'
+            snake: '#58a6ff'
 
-      - name: Deploy
+      - name: Deploy GIF
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: output
           folder: .
-          clean-exclude: |
-            snake.svg
-            snake.gif
+          clean-exclude: snake.gif
