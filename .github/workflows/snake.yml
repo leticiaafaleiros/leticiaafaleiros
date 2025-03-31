@@ -5,25 +5,26 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  
-
     steps:
       - uses: actions/checkout@v4
-     
-      - uses: Platane/snk@master
-        id: snake
+      
+      - name: Generate Animated Snake
+        uses: Platane/snk@master
         with:
-          github_user_name: leticiaafaleiros  
-          svg_out_path: snake.svg 
+          github_user_name: leticiaafaleiros
+          svg_out_path: snake.svg
+          gif_out_path: snake.gif  # Adicionando saída GIF
+          animate: true  # Força animação
+          colors:
+            background: '#0d1117'
+            snake: '#58a6ff'
 
-     
-      - name: Push to Output Branch
-        uses: actions-js/push@v1
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
         with:
-          branch: output
-          directory: .
-          files: snake.svg
-          force: true  
+          name: snake-animation
+          path: |
+            snake.svg
+            snake.gif
