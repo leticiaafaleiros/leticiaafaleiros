@@ -28,9 +28,3 @@
     <a href="https://www.linkedin.com/in/leticia-faleiros-" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>  
 </div>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/leticiaafaleiros/leticiaafaleiros/output/snake.gif?refresh=$(date +%s)" 
-       alt="GitHub Snake Animation" 
-       width="800"
-       style="max-width: 100%; border: 1px solid #30363d;">
-</p>
