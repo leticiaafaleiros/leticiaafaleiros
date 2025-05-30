@@ -3,7 +3,7 @@
 
 
 - 🔭 Hoje trabalho com front-end em aprendizado constante para me tornar fullstack
-- 🌱 Estudando Node.js
+- 🌱 UX/UI Design
 - 😄 Pronomuns: ela/dela
 
 <div>
